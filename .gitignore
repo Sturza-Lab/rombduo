@@ -1,0 +1,5 @@
+# Raw unedited video sources - not needed for the live site (compressed versions live in assets/web/)
+assets/source-video/
+.DS_Store
+node_modules/
+*.log

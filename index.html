@@ -285,6 +285,22 @@
   @keyframes diffbar{0%,100%{height:20%}50%{height:100%}}
   @media(prefers-reduced-motion:reduce){.diff-player.playing .diff-bars span{animation:none;height:60%}}
 
+  /* ===== RIDERS BAND ===== */
+  .riders-band{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:44px 0}
+  .riders-band .wrap{display:flex;flex-direction:column;gap:20px}
+  @media(min-width:700px){.riders-band .wrap{flex-direction:row;justify-content:space-between;align-items:center}}
+  .riders-text .eyebrow{display:block;margin-bottom:8px}
+  .riders-text h3{font-family:var(--font-display);font-weight:900;font-style:italic;font-size:1.35rem;color:var(--ink)}
+  .riders-btns{display:flex;flex-wrap:wrap;gap:14px}
+  .rider-btn{
+    display:inline-flex;align-items:center;gap:10px;padding:15px 24px;
+    border:1px solid var(--gold);border-radius:2px;background:rgba(200,155,74,.1);
+    color:var(--ink);font-weight:600;font-size:.92rem;
+    transition:background .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .rider-btn svg{width:16px;height:16px;flex:0 0 auto}
+  .rider-btn:hover{background:rgba(200,155,74,.22);transform:translateY(-2px);box-shadow:0 10px 26px -10px rgba(200,155,74,.5)}
+
   /* ===== FOOTER ===== */
   footer{padding:40px 0;border-top:1px solid var(--border)}
   .foot-row{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
@@ -443,6 +459,25 @@
     </span>
   </div>
 </section>
+
+<div class="riders-band">
+  <div class="wrap">
+    <div class="riders-text">
+      <span class="eyebrow">For your production team</span>
+      <h3>Technical &amp; hospitality riders</h3>
+    </div>
+    <div class="riders-btns">
+      <a class="rider-btn" href="assets/riders/technical-rider.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        <span>Technical Rider (PDF)</span>
+      </a>
+      <a class="rider-btn" href="assets/riders/hospitality-rider.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        <span>Hospitality Rider (PDF)</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap foot-row">

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Technical Rider — Rombo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,500;1,9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14100D; --surface:#1C1613; --ink:#F5EFE8; --ink-muted:#B8A99A;
+    --wine:#8C1D2B; --gold:#C89B4A; --border:rgba(200,155,74,0.25);
+    --font-display:'Fraunces',serif; --font-body:'Work Sans',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font-body)}
+  @page{size:A4;margin:0}
+
+  .cover{
+    width:210mm;height:297mm;position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 18% 15%, rgba(140,29,43,.35), transparent 55%),
+      radial-gradient(circle at 85% 88%, rgba(200,155,74,.18), transparent 50%),
+      var(--bg);
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:22mm 20mm;
+    page-break-after:always;
+  }
+  .cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+  .cover-eyebrow{font-size:10pt;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .cover-mid{margin-top:auto;margin-bottom:auto}
+  .cover-word{font-family:var(--font-display);font-weight:900;font-size:58pt;line-height:.98;color:var(--ink);letter-spacing:-.01em}
+  .cover-sub{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:20pt;color:var(--gold);margin-top:10mm}
+  .cover-rule{width:32mm;height:1px;background:var(--gold);margin:8mm 0}
+  .cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;color:var(--ink-muted);letter-spacing:.05em}
+  .cover-bottom b{color:var(--gold);font-weight:600}
+
+  .page{
+    width:210mm;height:297mm;position:relative;background:var(--bg);
+    padding:24mm 20mm 26mm;page-break-after:always;
+  }
+  .page:last-child{page-break-after:auto}
+  .page-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--border);padding-bottom:6mm;margin-bottom:10mm}
+  .page-head .eyebrow{font-size:8.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .page-head .brand{font-family:var(--font-display);font-weight:900;font-size:11pt;letter-spacing:.04em}
+  h1{font-family:var(--font-display);font-weight:900;font-size:27pt;line-height:1.05;margin-bottom:5mm}
+  .lede{color:var(--ink-muted);font-size:10.5pt;line-height:1.6;max-width:150mm;margin-bottom:12mm}
+
+  .req{display:flex;gap:6mm;padding:5.5mm 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .req:last-child{border-bottom:none}
+  .req .n{
+    flex:0 0 auto;width:9mm;height:9mm;border-radius:50%;border:1px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-weight:600;font-size:9.5pt;color:var(--gold);
+  }
+  .req .t{font-size:10.5pt;line-height:1.55;color:var(--ink);padding-top:.5mm}
+  .req .t b{color:var(--gold);font-weight:600}
+  .req .t .note{display:block;margin-top:2mm;color:var(--ink-muted);font-size:9.5pt;font-style:italic}
+
+  .callout{
+    margin-top:8mm;padding:6mm 7mm;border:1px solid var(--wine);background:rgba(140,29,43,.12);
+    border-radius:2px;
+  }
+  .callout .tag{font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:2.5mm;display:block}
+  .callout p{font-size:10pt;color:var(--ink);line-height:1.55}
+
+  .extra-list{margin-top:2mm}
+  .extra-item{display:flex;gap:5mm;padding:4mm 0;border-bottom:1px dashed var(--border)}
+  .extra-item:last-child{border-bottom:none}
+  .extra-item .mark{color:var(--gold);font-family:var(--font-display);font-style:italic;font-weight:600}
+  .extra-item .t{font-size:10.5pt;color:var(--ink);line-height:1.5}
+
+  .footnote{margin-top:10mm;font-size:9pt;color:var(--ink-muted);font-style:italic;line-height:1.5}
+
+  .page-foot{
+    position:absolute;bottom:14mm;left:20mm;right:20mm;
+    display:flex;justify-content:space-between;font-size:8pt;color:var(--ink-muted);
+    letter-spacing:.05em;border-top:1px solid var(--border);padding-top:4mm;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-top">
+    <span class="cover-eyebrow">Live Percussion × DJ Sets</span>
+  </div>
+  <div class="cover-mid">
+    <div class="cover-word">ROMBO</div>
+    <div class="cover-rule"></div>
+    <div class="cover-sub">Technical Rider</div>
+  </div>
+  <div class="cover-bottom">
+    <span>Available across Vietnam</span>
+    <span><b>2026</b> Edition</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-head"><span class="eyebrow">Technical Rider</span><span class="brand">ROMBO</span></div>
+  <h1>Core requirements</h1>
+  <p class="lede">Everything below is essential for the live drum + DJ set to sound the way it's designed to sound. Please confirm all points with your sound engineer ahead of the event.</p>
+
+  <div class="req">
+    <span class="n">01</span>
+    <span class="t">Four microphones (preferably <b>Shure SM57</b>) with stands and cables</span>
+  </div>
+  <div class="req">
+    <span class="n">02</span>
+    <span class="t">Several monitor wedges</span>
+  </div>
+  <div class="req">
+    <span class="n">03</span>
+    <span class="t">Two keyboard stands<span class="note">This is essential for our drum setup</span></span>
+  </div>
+  <div class="req">
+    <span class="n">04</span>
+    <span class="t">Sound system appropriate for the venue size</span>
+  </div>
+  <div class="req">
+    <span class="n">05</span>
+    <span class="t">Mixer</span>
+  </div>
+  <div class="req">
+    <span class="n">06</span>
+    <span class="t">For outdoor events: all microphones must be equipped with proper wind protection (professional-grade foam or furry windshields, e.g. "deadcat")<span class="note">To prevent wind noise and ensure sound quality</span></span>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Critical point</span>
+    <p>One sound engineer is required, who will patch and mix everything from the console, be able to mix live drums with DJ music to achieve perfect balance, and must stay in the hall for the entire event, actively managing the sound - adjusting FOH and monitors if anything goes wrong during the performance. The sound engineer must be present at all times.</p>
+  </div>
+
+  <div class="page-foot"><span>Rombo · Technical Rider</span><span>Page 1 / 2</span></div>
+</div>
+
+<div class="page">
+  <div class="page-head"><span class="eyebrow">Technical Rider</span><span class="brand">ROMBO</span></div>
+  <h1>Additional requests</h1>
+  <p class="lede">Nice-to-haves that elevate the setup. Please let us know in advance if any of these cannot be arranged.</p>
+
+  <div class="extra-list">
+    <div class="extra-item">
+      <span class="mark">✦</span>
+      <span class="t">A pair of additional cymbals (on stands) - this would make the drum setup look and sound more massive</span>
+    </div>
+    <div class="extra-item">
+      <span class="mark">✦</span>
+      <span class="t">A bongo and a bongo stand - this would be a great addition</span>
+    </div>
+  </div>
+
+  <p class="footnote">Note: if any of the above additional items cannot be provided, please inform us in advance.</p>
+
+  <div class="page-foot"><span>Rombo · Technical Rider</span><span>Page 2 / 2</span></div>
+</div>
+
+</body>
+</html>
